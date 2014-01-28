@@ -14,10 +14,10 @@
   "devDependencies": {
     "chai": "~1.8.1",
     "gulp-mocha": "~0.4.1",
-    "gulp-util": "~2.2.12"
+    "gulp-util": "~2.2.12",
+    "gulp": "~3.5.0"
   },
   "dependencies": {
-    "gulp": "~3.5.0",
     "coffee-script": "~1.6.3",
     "jade-react": "~0.1.0",
     "through2": "~0.4.1"
