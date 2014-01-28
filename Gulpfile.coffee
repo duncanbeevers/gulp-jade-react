@@ -7,6 +7,7 @@ gulp.task 'release', ->
   version = require('package')('.').version
   gulp.src('.')
     .pipe(git.tag(version, 'Release'))
+    .pipe(git.push('origin', version))
 
 gulp.task 'bump', ->
   gulp.src('package.json')
