@@ -6,6 +6,8 @@ mocha = require('gulp-mocha')
 gulp.task 'release', ->
   version = require('package')('.').version
   gulp.src('.')
+    .pipe(git.add('package.json'))
+    .pipe(git.commit('Release'))
     .pipe(git.tag(version, 'Release'))
     .pipe(git.push('origin', version))
 
