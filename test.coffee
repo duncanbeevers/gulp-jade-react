@@ -13,7 +13,7 @@ describe 'gulp-jade-react', ->
 
     stream.on 'end', ->
       output = buffer[0]
-      expect(String(output.contents)).to.equal('React.DOM.p(null, "Moar")\n')
+      expect(String(output.contents)).to.equal('function(){return React.DOM.p(null,"Moar");}')
       cb()
 
     stream.write new gutil.File
