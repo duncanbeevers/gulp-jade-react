@@ -4,7 +4,7 @@
   "description": "Compile Jade templates to React components",
   "main": "./main.js",
   "scripts": {
-    "test": "gulp test --require coffee-script"
+    "test": "gulp test --require coffee-script/register"
   },
   "keywords": [
     "gulpplugin"
