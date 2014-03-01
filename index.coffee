@@ -1,5 +1,6 @@
-render = require('jade-react')
-through = require('through2')
+render     = require 'jade-react'
+through    = require 'through2'
+replaceExt = require 'replace-ext'
 
 gulpJadeReact = ->
   stream = through.obj (file, enc, callback) ->
@@ -9,6 +10,7 @@ gulpJadeReact = ->
 
     else if file.isBuffer()
       file.contents = new Buffer(render(file.contents))
+      file.path = replaceExt(file.path, '.js')
       @push(file)
       return callback()
 

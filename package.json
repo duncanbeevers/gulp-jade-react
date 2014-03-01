@@ -2,9 +2,9 @@
   "name": "gulp-jade-react",
   "version": "0.1.1",
   "description": "Compile Jade templates to React components",
-  "main": "index.coffee",
+  "main": "./main.js",
   "scripts": {
-    "test": "gulp test --require coffee-script"
+    "test": "gulp test --require coffee-script/register"
   },
   "keywords": [
     "gulpplugin"
@@ -21,9 +21,10 @@
     "package": "~1.0.1"
   },
   "dependencies": {
-    "coffee-script": "~1.6.3",
-    "jade-react": "~0.1.0",
-    "through2": "~0.4.1"
+    "coffee-script": "~1.7.1",
+    "jade-react": "~0.2.0",
+    "through2": "~0.4.1",
+    "replace-ext": "0.0.1"
   },
   "repository": {
     "type": "git",
